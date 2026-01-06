@@ -3,57 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interactive Birthday Card to my Best friend</title>
+    <title>Happy Birthday Dilasha</title>
     <link rel="stylesheet" href="style.css">
-    
-       
+    <link rel="icon" href="./icons8-love-48.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comfortaa:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Background Music -->
+    <audio id="birthdayMusic" loop>
+        <source src="happy-birthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Envelope Card -->
+    <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope-container">
+            <!-- Floating Hearts -->
+            <div class="heart heart-1">💕</div>
+            <div class="heart heart-2">💖</div>
+            <div class="heart heart-3">💗</div>
+            <div class="heart heart-4">💝</div>
+            <div class="heart heart-5">❤️</div>
+            <div class="heart heart-6">💓</div>
+            
+            <div class="envelope">
+                <div class="envelope-flap">
+                    <div class="flap-hearts">
+                        <span>💕</span>
+                        <span>💖</span>
+                        <span>💕</span>
+                    </div>
+                </div>
+                <div class="envelope-body">
+                    <div class="envelope-decoration">
+                        <div class="love-border">
+                            <span>💝</span><span>💖</span><span>💕</span><span>💗</span><span>❤️</span>
+                        </div>
+                    </div>
+                    <div class="envelope-seal">
+                        <div class="seal-content">
+                            <span class="seal-icon">🎁</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="envelope-letter"></div>
+        </div>
+    </div>
+    
+    <!-- Birthday Card Content (Hidden Initially) -->
+    <div class="birthday-content" id="birthdayContent">
+        <div class="confetti-container" id="confetti"></div>
+        <div class="stars"></div>
     
     <div class="card">
         <div class="banner">
+            <div class="glow-effect"></div>
             <img src="bannerflower.png" alt="banner-flower" 
-             class="bannerflower">
+             class="bannerflower floating">
             <img src="bannerflower1.png" alt="banner-flower" 
-             class="bannerflower1">
+             class="bannerflower1 floating-delayed">
             <img src="bannerflower2.png" alt="banner-flower" 
-             class="bannerflower2">
+             class="bannerflower2 floating">
             <img src="bannerflower3.png" alt="banner-flower" 
-             class="bannerflower3">
-            <h1 class="title">Happy birthday to u 🎉</h1>
-            
+             class="bannerflower3 floating-delayed">
+            <h1 class="title shine">Happy Birthday to You! 🎉</h1>
+            <div class="sparkles">✨</div>
         </div>
         <div class="Small-message">
-            <h2>To my special friend 🤗 !</h2>
-            <h2>Future Dr. Dilasha Kunwar👩‍⚕️</h2>
+            <h2 class="fade-in">To my special friend 🤗!</h2>
+            <h2 class="fade-in-delayed gradient-text">Future Dr. Dilasha Kunwar 👩‍⚕️</h2>
             <div class="birthday-girl">
-                <img src="birthdaygirl.jpg" alt="Birthday-girl" class="birthday-img" height="300px" width="300px">
-                <img src="overlay.png" alt="decorative overlay" class="overlay">
-                <img src="overlay1.png" alt="decorative overlay" class="overlay1">
+                <div class="image-frame">
+                    <img src="birthdaygirl.jpg" alt="Birthday-girl" class="birthday-img" height="300px" width="300px">
+                    <div class="frame-border"></div>
+                </div>
+                <img src="overlay.png" alt="decorative overlay" class="overlay pulse">
+                <img src="overlay1.png" alt="decorative overlay" class="overlay1 pulse-delayed">
             </div>
-                <br>
-                <p class="message">Wishing you a day filled with happiness, laughter, and unforgettable moments 😀.<br>
-                May this year bring you new opportunities, success, and everything your heart hopes for.🎊🥳<br>
-                Enjoy your special day to the fullest!And i hope u have wonderful upcoming days and years.
-                
-                <br>
-               </p>
-
+            <div class="message-box">
+                <p class="message">
+                    ✨ Wishing you a day filled with happiness, laughter, and unforgettable moments! 😀
+                    <br><br>
+                    🌟 May this year bring you new opportunities, success, and everything your heart hopes for! 🎊🥳
+                    <br><br>
+                    🎈 Enjoy your special day to the fullest! And I hope you have wonderful upcoming days and years ahead!
+                </p>
+            </div>
         </div>
 
 
         <div class="Appreciation-card">
-            <a href="https://s-hyphen.github.io/Birthday-card/" class="button button2">Small message from me</a>
+            <a href="https://s-hyphen.github.io/Birthday-card/" class="button button2">
+                <span>💌 A Special Message from Me 💌</span>
+            </a>
         </div>
 
-            
         <div class="signature">
-            <p>From your friend,</p>
-            <p>Shreeyut Thapa</p>
+            <p class="from-text">With love and best wishes,</p>
+            <p class="name-text">Shreeyut Thapa 💝</p>
         </div>
-        
+    </div>
+    </div>
     
+    <script src="script.js"></script>
 </body>
 
 
