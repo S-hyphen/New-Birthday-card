@@ -13,6 +13,12 @@
 </head>
 
 <body>
+    <!-- Background Music -->
+    <audio id="birthdayMusic" autoplay loop>
+        <source src="happy-birthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
     <div class="background">
         <!-- Animated particles -->
         <div class="particles">
@@ -29,13 +35,13 @@
         </div>
 
         <div class="container">
-            <h1 class="main-title">
+            <h1 class="main-title" style="color:rgb(2, 2, 61);">
                 <span class="title-word">Happy</span>
                 <span class="title-word">Birthday</span>
                 <span class="title-word">to</span>
                 <span class="title-word">you</span>
                 <span class="title-word">my</span>
-                <span class="title-word">best</span>
+                <span class="title-word">beloved</span>
                 <span class="title-word">friend</span>
             </h1>
             
@@ -46,7 +52,7 @@
                     <div class="heart-decoration">💝</div>
                     
                     <div class="letter-body">
-                        <p class="letter-greeting">Dear My Best Friend,</p>
+                        <p class="letter-greeting">Dear Best Friend,</p>
 
                         <p class="letter-text">
                             On this special day, I want to take a moment to celebrate you.
@@ -77,5 +83,19 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        // Start music with volume control
+        const birthdayMusic = document.getElementById('birthdayMusic');
+        birthdayMusic.volume = 0.6;
+        
+        // Attempt to play music (browsers may require user interaction)
+        birthdayMusic.play().catch(error => {
+            // If autoplay is blocked, play on first user interaction
+            document.body.addEventListener('click', () => {
+                birthdayMusic.play();
+            }, { once: true });
+        });
+    </script>
 </body>
 </html>
